@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aglio & Pasta</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
       rel="stylesheet"
     />
     <link rel="shortcut icon" href="./Logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="/src/style.css">
   </head>
   <body class="bg-white">
     <!-- Navbar -->
@@ -72,22 +72,22 @@
           class="w-full h-full object-cover"
         />
       </div>
-      <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-      <div class="absolute bottom-0 left-0 p-8 text-white">
+      <div class="absolute inset-0 bg-black opacity-50"></div>
+      <div class="absolute bottom-0 left-0 p-8 text-white" data-aos="fade-up">
         <h2
-          class="text-5xl font-bold mb-4"
+          class="text-5xl font-bold mb-4 flex flex-col"
           style="font-family: 'Playfair Display', serif"
         >
-          Cinnamon Apple<br />Loaded Tart
+          Cinnamon Apple <span>Loaded Tart</span>
         </h2>
       </div>
     </section>
 
     <!-- Popular Categories -->
-    <section class="container mx-auto px-4 mb-16">
+    <section class="container mx-auto px-4 mb-16 overflow-hidden">
       <h2 class="text-2xl font-bold mb-8">Popular Categories</h2>
       <div class="flex space-x-8 overflow-x-auto pb-4">
-        <div class="flex flex-col items-center">
+        <div class="flex flex-col items-center" data-aos="fade-up">
           <div
             class="w-20 h-20 rounded-full bg-yellow-100 flex items-center justify-center mb-2"
           >
@@ -99,7 +99,7 @@
           </div>
           <span class="text-sm">Pasta</span>
         </div>
-        <div class="flex flex-col items-center">
+        <div class="flex flex-col items-center" data-aos="fade-up" data-aos-duration="800">
           <div
             class="w-20 h-20 rounded-full bg-red-100 flex items-center justify-center mb-2"
           >
@@ -117,9 +117,9 @@
 
     <!-- Super Delicious Section -->
     <section class="container mx-auto px-4 mb-16">
-      <h2 class="text-2xl font-bold mb-8">Super Delicious</h2>
+      <h2 class="text-2xl font-bold mb-8" data-aos="fade-up">Super Delicious</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="rounded-lg overflow-hidden shadow-lg">
+        <div class="rounded-lg overflow-hidden shadow-lg" data-aos="fade-up">
           <img
             src="https://images.unsplash.com/photo-1587314168485-3236d6710814"
             alt="Pancakes"
@@ -144,18 +144,19 @@
 
     <!-- Curated Collections -->
     <section class="container mx-auto px-4 mb-16">
-      <h2 class="text-2xl font-bold mb-8">Curated Collections</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <h2 class="text-2xl font-bold mb-8" data-aos="fade-up">Curated Collections</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up">
         <div class="relative h-64 rounded-lg overflow-hidden group">
           <img
             src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c"
             alt="Sushi"
             class="w-full h-full object-cover"
           />
+          <div class="absolute inset-0 bg-black opacity-50"></div>
           <div
-            class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-6"
+            class="absolute inset-0 flex items-end p-6"
           >
-            <div>
+          <div>
               <h3 class="text-white text-xl font-bold mb-2">
                 Sushi Combos for your Next Party
               </h3>
