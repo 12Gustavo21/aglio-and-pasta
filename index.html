@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aglio & Pasta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./Logo.svg" type="image/x-icon" />
+  </head>
+  <body class="bg-white">
+    <!-- Navbar -->
+    <nav class="container mx-auto px-4 py-6">
+      <div class="flex justify-between items-center">
+        <button class="text-gray-600">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            />
+          </svg>
+        </button>
+        <h1
+          class="text-4xl font-bold"
+          style="font-family: 'Playfair Display', serif"
+        >
+          Aglio & Pasta
+        </h1>
+        <button class="text-gray-600">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="flex justify-center space-x-8 mt-6">
+        <a href="#" class="text-gray-600 hover:text-gray-900">Home Page</a>
+        <a href="#" class="text-gray-600 hover:text-gray-900">Recipe Page</a>
+        <a href="#" class="text-gray-600 hover:text-gray-900">Pages</a>
+        <a href="#" class="text-gray-600 hover:text-gray-900">Elements</a>
+        <a href="#" class="text-gray-600 hover:text-gray-900">Buy</a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-[500px] mb-16">
+      <div class="absolute inset-0">
+        <img
+          src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?ixlib=rb-4.0.3"
+          alt="Apple Tart"
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+      <div class="absolute bottom-0 left-0 p-8 text-white">
+        <h2
+          class="text-5xl font-bold mb-4"
+          style="font-family: 'Playfair Display', serif"
+        >
+          Cinnamon Apple<br />Loaded Tart
+        </h2>
+      </div>
+    </section>
+
+    <!-- Popular Categories -->
+    <section class="container mx-auto px-4 mb-16">
+      <h2 class="text-2xl font-bold mb-8">Popular Categories</h2>
+      <div class="flex space-x-8 overflow-x-auto pb-4">
+        <div class="flex flex-col items-center">
+          <div
+            class="w-20 h-20 rounded-full bg-yellow-100 flex items-center justify-center mb-2"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/3364/3364044.png"
+              alt="Pasta"
+              class="w-12 h-12"
+            />
+          </div>
+          <span class="text-sm">Pasta</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <div
+            class="w-20 h-20 rounded-full bg-red-100 flex items-center justify-center mb-2"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png"
+              alt="Pizza"
+              class="w-12 h-12"
+            />
+          </div>
+          <span class="text-sm">Pizza</span>
+        </div>
+        <!-- Add more categories as needed -->
+      </div>
+    </section>
+
+    <!-- Super Delicious Section -->
+    <section class="container mx-auto px-4 mb-16">
+      <h2 class="text-2xl font-bold mb-8">Super Delicious</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="rounded-lg overflow-hidden shadow-lg">
+          <img
+            src="https://images.unsplash.com/photo-1587314168485-3236d6710814"
+            alt="Pancakes"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-4">
+            <div class="flex text-orange-500 mb-2">★★★★★</div>
+            <h3 class="text-lg font-semibold mb-2">Fluffy Pancake Stack</h3>
+            <div class="flex items-center">
+              <img
+                src="https://i.pravatar.cc/40"
+                alt="Author"
+                class="w-8 h-8 rounded-full mr-2"
+              />
+              <span class="text-sm text-gray-600">John Doe</span>
+            </div>
+          </div>
+        </div>
+        <!-- More recipe cards -->
+      </div>
+    </section>
+
+    <!-- Curated Collections -->
+    <section class="container mx-auto px-4 mb-16">
+      <h2 class="text-2xl font-bold mb-8">Curated Collections</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="relative h-64 rounded-lg overflow-hidden group">
+          <img
+            src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c"
+            alt="Sushi"
+            class="w-full h-full object-cover"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-6"
+          >
+            <div>
+              <h3 class="text-white text-xl font-bold mb-2">
+                Sushi Combos for your Next Party
+              </h3>
+              <button
+                class="bg-white text-black px-4 py-1 rounded-full text-sm opacity-0 group-hover:opacity-100 transition-opacity"
+              >
+                View Collection
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- More collection cards -->
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="bg-pink-100 py-12">
+      <div class="container mx-auto px-4">
+        <div class="max-w-2xl mx-auto text-center">
+          <h2
+            class="text-3xl font-bold mb-4"
+            style="font-family: 'Playfair Display', serif"
+          >
+            Deliciousness to your inbox
+          </h2>
+          <p class="text-gray-600 mb-6">
+            Enjoy weekly handpicked recipes and recommendations
+          </p>
+          <div class="flex gap-4">
+            <input
+              type="email"
+              placeholder="Email Address"
+              class="flex-1 px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-orange-500"
+            />
+            <button
+              class="bg-orange-500 text-white px-8 py-2 rounded-md hover:bg-orange-600"
+            >
+              JOIN
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="container mx-auto px-4 py-12">
+      <div class="flex justify-between items-start">
+        <div class="max-w-xs">
+          <h1
+            class="text-2xl font-bold mb-4"
+            style="font-family: 'Playfair Display', serif"
+          >
+            Tastebite
+          </h1>
+          <p class="text-gray-600 text-sm">
+            A food blog that provides trusted recipes from all over the world
+          </p>
+        </div>
+        <div class="flex space-x-12">
+          <div>
+            <h3 class="font-semibold mb-4">Categories</h3>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li><a href="#" class="hover:text-gray-900">Breakfast</a></li>
+              <li><a href="#" class="hover:text-gray-900">Lunch</a></li>
+              <li><a href="#" class="hover:text-gray-900">Dinner</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-4">About</h3>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li><a href="#" class="hover:text-gray-900">About Us</a></li>
+              <li><a href="#" class="hover:text-gray-900">Contact</a></li>
+              <li><a href="#" class="hover:text-gray-900">Terms</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
