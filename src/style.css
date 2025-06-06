@@ -1,1 +1,35 @@
 @import "tailwindcss";
+@plugin "daisyui";
+
+.carousel-item {
+  scroll-snap-align: start;
+}
+.carousel {
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.italian-flag-gradient {
+  background: linear-gradient(
+    90deg,
+    #009246 0%,
+    #009246 33%,
+    #ffffff 33%,
+    #ffffff 66%,
+    #ce2b37 66%,
+    #ce2b37 100%
+  );
+}
+.italian-text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.tstbite-animation {
+  transition: transform 0.3s ease;
+}
+.tstbite-animation:hover {
+  transform: scale(1.1);
+}

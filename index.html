@@ -9,9 +9,9 @@
       rel="stylesheet"
     />
     <link rel="shortcut icon" href="./Logo.svg" type="image/x-icon" />
-    <link rel="stylesheet" href="/src/style.css">
+    <link rel="stylesheet" href="/src/style.css" />
   </head>
-  <body class="bg-white">
+  <body class="bg-white text-gray-900">
     <!-- Navbar -->
     <nav class="container mx-auto px-4 py-6">
       <div class="flex justify-between items-center">
@@ -56,7 +56,9 @@
       </div>
       <div class="flex justify-center space-x-8 mt-6">
         <a href="#" class="text-gray-600 hover:text-gray-900">Home Page</a>
-        <a href="#" class="text-gray-600 hover:text-gray-900">Recipe Page</a>
+        <a href="./cardapio.html" class="text-gray-600 hover:text-gray-900"
+          >Recipe Page</a
+        >
         <a href="#" class="text-gray-600 hover:text-gray-900">Pages</a>
         <a href="#" class="text-gray-600 hover:text-gray-900">Elements</a>
         <a href="#" class="text-gray-600 hover:text-gray-900">Buy</a>
@@ -64,60 +66,211 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative h-[500px] mb-16">
-      <div class="absolute inset-0">
-        <img
-          src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?ixlib=rb-4.0.3"
-          alt="Apple Tart"
-          class="w-full h-full object-cover"
-        />
+    <div
+      id="hero-carousel"
+      class="carousel carousel-center w-full h-[550px] mb-16 overflow-hidden shadow-2xl relative"
+    >
+      <div id="slide1" class="carousel-item relative w-full">
+        <div class="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?ixlib=rb-4.0.3&w=1200"
+            alt="Spaghetti Carbonara"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70"
+        ></div>
+        <!-- Pequena bandeira italiana no canto -->
+        <div
+          class="absolute top-4 right-4 w-16 h-10 italian-flag-gradient rounded shadow-lg"
+        ></div>
+        <div class="absolute bottom-0 left-0 p-8 text-white">
+          <h2
+            class="text-5xl font-bold mb-4 flex flex-col italian-text-shadow"
+            style="font-family: 'Playfair Display', serif"
+          >
+            Spaghetti <span class="text-yellow-300">Carbonara</span>
+          </h2>
+          <p class="text-xl italic opacity-90">Tradizione romana autentica</p>
+        </div>
       </div>
-      <div class="absolute inset-0 bg-black opacity-50"></div>
-      <div class="absolute bottom-0 left-0 p-8 text-white" data-aos="fade-up">
-        <h2
-          class="text-5xl font-bold mb-4 flex flex-col"
-          style="font-family: 'Playfair Display', serif"
-        >
-          Cinnamon Apple <span>Loaded Tart</span>
-        </h2>
-      </div>
-    </section>
 
-    <!-- Popular Categories -->
-    <section class="container mx-auto px-4 mb-16 overflow-hidden">
-      <h2 class="text-2xl font-bold mb-8">Popular Categories</h2>
-      <div class="flex space-x-8 overflow-x-auto pb-4">
-        <div class="flex flex-col items-center" data-aos="fade-up">
-          <div
-            class="w-20 h-20 rounded-full bg-yellow-100 flex items-center justify-center mb-2"
-          >
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/3364/3364044.png"
-              alt="Pasta"
-              class="w-12 h-12"
-            />
-          </div>
-          <span class="text-sm">Pasta</span>
+      <div id="slide2" class="carousel-item relative w-full">
+        <div class="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1645112411341-6c4fd023714a?ixlib=rb-4.0.3&w=1200"
+            alt="Fettuccine Alfredo"
+            class="w-full h-full object-cover"
+          />
         </div>
-        <div class="flex flex-col items-center" data-aos="fade-up" data-aos-duration="800">
-          <div
-            class="w-20 h-20 rounded-full bg-red-100 flex items-center justify-center mb-2"
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70"
+        ></div>
+        <!-- Pequena bandeira italiana no canto -->
+        <div
+          class="absolute top-4 right-4 w-16 h-10 italian-flag-gradient rounded shadow-lg"
+        ></div>
+        <div class="absolute bottom-0 left-0 p-8 text-white">
+          <h2
+            class="text-5xl font-bold mb-4 flex flex-col italian-text-shadow"
+            style="font-family: 'Playfair Display', serif"
           >
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png"
-              alt="Pizza"
-              class="w-12 h-12"
-            />
-          </div>
-          <span class="text-sm">Pizza</span>
+            Fettuccine <span class="text-green-300">Alfredo</span>
+          </h2>
+          <p class="text-xl italic opacity-90">Cremosa eleganza romana</p>
         </div>
-        <!-- Add more categories as needed -->
+      </div>
+
+      <!-- Slide 3 - Cannoli -->
+      <div id="slide3" class="carousel-item relative w-full">
+        <div class="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1488477181946-6428a0291777?ixlib=rb-4.0.3&w=1200"
+            alt="Panna Cotta Italiana"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70"
+        ></div>
+        <!-- Pequena bandeira italiana no canto -->
+        <div
+          class="absolute top-4 right-4 w-16 h-10 italian-flag-gradient rounded shadow-lg"
+        ></div>
+        <div class="absolute bottom-0 left-0 p-8 text-white">
+          <h2
+            class="text-5xl font-bold mb-4 flex flex-col italian-text-shadow"
+            style="font-family: 'Playfair Display', serif"
+          >
+            Panna Cotta <span class="text-red-300">ai Frutti</span>
+          </h2>
+          <p class="text-xl italic opacity-90">Dolcezza setosa del Piemonte</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="container mx-auto px-6 my-16 md:my-20">
+      <h2 class="text-4xl font-bold text-left text-gray-800 mb-12" style="font-family: 'Playfair Display', serif">
+        Popular Categories
+      </h2>
+
+      <div class="grid grid-cols-3 lg:grid-cols-6 gap-x-4 gap-y-8">
+        <a href="category.html" class="group block text-center">
+          <figure>
+            <div class="relative w-24 h-24 md:w-40 md:h-40 mx-auto">
+              <img
+                src="src/img/menus/menu1.png"
+                alt="Pasta"
+                class="w-full h-full object-cover rounded-full shadow-md transition-transform duration-300 group-hover:scale-110"
+              />
+            </div>
+            <figcaption class="mt-4">
+              <span
+                class="font-semibold text-gray-700 transition-colors group-hover:text-red-600"
+                >Pasta</span
+              >
+            </figcaption>
+          </figure>
+        </a>
+
+        <a href="category.html" class="group block text-center">
+          <figure>
+            <div class="relative w-24 h-24 md:w-40 md:h-40 mx-auto">
+              <img
+                src="src/img/menus/menu2.png"
+                alt="Pizza"
+                class="w-full h-full object-cover rounded-full shadow-md transition-transform duration-300 group-hover:scale-110"
+              />
+            </div>
+            <figcaption class="mt-4">
+              <span
+                class="font-semibold text-gray-700 transition-colors group-hover:text-red-600"
+                >Pizza</span
+              >
+            </figcaption>
+          </figure>
+        </a>
+
+        <a href="category.html" class="group block text-center">
+          <figure>
+            <div class="relative w-24 h-24 md:w-40 md:h-40 mx-auto">
+              <img
+                src="src/img/menus/menu3.png"
+                alt="Vegan"
+                class="w-full h-full object-cover rounded-full shadow-md transition-transform duration-300 group-hover:scale-110"
+              />
+            </div>
+            <figcaption class="mt-4">
+              <span
+                class="font-semibold text-gray-700 transition-colors group-hover:text-red-600"
+                >Vegan</span
+              >
+            </figcaption>
+          </figure>
+        </a>
+
+        <a href="category.html" class="group block text-center">
+          <figure>
+            <div class="relative w-24 h-24 md:w-40 md:h-40 mx-auto">
+              <img
+                src="src/img/menus/menu4.png"
+                alt="Desserts"
+                class="w-full h-full object-cover rounded-full shadow-md transition-transform duration-300 group-hover:scale-110"
+              />
+            </div>
+            <figcaption class="mt-4">
+              <span
+                class="font-semibold text-gray-700 transition-colors group-hover:text-red-600"
+                >Desserts</span
+              >
+            </figcaption>
+          </figure>
+        </a>
+
+        <a href="category.html" class="group block text-center">
+          <figure>
+            <div class="relative w-24 h-24 md:w-40 md:h-40 mx-auto">
+              <img
+                src="src/img/menus/menu5.png"
+                alt="Smoothies"
+                class="w-full h-full object-cover rounded-full shadow-md transition-transform duration-300 group-hover:scale-110"
+              />
+            </div>
+            <figcaption class="mt-4">
+              <span
+                class="font-semibold text-gray-700 transition-colors group-hover:text-red-600"
+                >Smoothies</span
+              >
+            </figcaption>
+          </figure>
+        </a>
+
+        <a href="category.html" class="group block text-center">
+          <figure>
+            <div class="relative w-24 h-24 md:w-40 md:h-40 mx-auto">
+              <img
+                src="src/img/menus/menu6.png"
+                alt="Breakfast"
+                class="w-full h-full object-cover rounded-full shadow-md transition-transform duration-300 group-hover:scale-110"
+              />
+            </div>
+            <figcaption class="mt-4">
+              <span
+                class="font-semibold text-gray-700 transition-colors group-hover:text-red-600"
+                >Breakfast</span
+              >
+            </figcaption>
+          </figure>
+        </a>
       </div>
     </section>
 
     <!-- Super Delicious Section -->
     <section class="container mx-auto px-4 mb-16">
-      <h2 class="text-2xl font-bold mb-8" data-aos="fade-up">Super Delicious</h2>
+      <h2 class="text-2xl font-bold mb-8" data-aos="fade-up">
+        Super Delicious
+      </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div class="rounded-lg overflow-hidden shadow-lg" data-aos="fade-up">
           <img
@@ -138,14 +291,17 @@
             </div>
           </div>
         </div>
-        <!-- More recipe cards -->
       </div>
     </section>
 
-    <!-- Curated Collections -->
     <section class="container mx-auto px-4 mb-16">
-      <h2 class="text-2xl font-bold mb-8" data-aos="fade-up">Curated Collections</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up">
+      <h2 class="text-2xl font-bold mb-8" data-aos="fade-up">
+        Curated Collections
+      </h2>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        data-aos="fade-up"
+      >
         <div class="relative h-64 rounded-lg overflow-hidden group">
           <img
             src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c"
@@ -153,10 +309,8 @@
             class="w-full h-full object-cover"
           />
           <div class="absolute inset-0 bg-black opacity-50"></div>
-          <div
-            class="absolute inset-0 flex items-end p-6"
-          >
-          <div>
+          <div class="absolute inset-0 flex items-end p-6">
+            <div>
               <h3 class="text-white text-xl font-bold mb-2">
                 Sushi Combos for your Next Party
               </h3>
@@ -168,45 +322,27 @@
             </div>
           </div>
         </div>
-        <!-- More collection cards -->
       </div>
     </section>
 
-    <!-- Newsletter Section -->
-    <section class="bg-pink-100 py-12">
-      <div class="container mx-auto px-4">
-        <div class="max-w-2xl mx-auto text-center">
-          <h2
-            class="text-3xl font-bold mb-4"
-            style="font-family: 'Playfair Display', serif"
-          >
-            Deliciousness to your inbox
-          </h2>
-          <p class="text-gray-600 mb-6">
-            Enjoy weekly handpicked recipes and recommendations
-          </p>
-          <div class="flex gap-4">
-            <input
-              type="email"
-              placeholder="Email Address"
-              class="flex-1 px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-orange-500"
-            />
-            <button
-              class="bg-orange-500 text-white px-8 py-2 rounded-md hover:bg-orange-600"
-            >
-              JOIN
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div class="h-[400px] flex flex-col justify-center items-center mt-8">
+      <h3
+        class="text-3xl font-bold text-gray-800 mb-4"
+        style="font-family: 'Playfair Display', serif"
+      >
+        🇮🇹 Sapori della Tradizione 🇮🇹
+      </h3>
+      <p class="text-lg text-gray-600 italic">
+        "La pasta è l'anima della cucina italiana"
+      </p>
+    </div>
 
     <!-- Footer -->
     <footer class="container mx-auto px-4 py-12">
       <div class="flex justify-between items-start">
         <div class="max-w-xs">
           <h1
-            class="text-2xl font-bold mb-4"
+            class="text-2xl font-bold mb-4 text-gray-600"
             style="font-family: 'Playfair Display', serif"
           >
             Tastebite
@@ -236,5 +372,25 @@
       </div>
     </footer>
     <script type="module" src="/src/main.js"></script>
+    <script>
+      const carouselContainer = document.getElementById("hero-carousel");
+      const slides = carouselContainer.querySelectorAll(".carousel-item");
+      const totalSlides = slides.length;
+      let currentSlide = 0;
+
+      function autoSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+
+        const slideWidth = carouselContainer.offsetWidth;
+
+        const newScrollPosition = currentSlide * slideWidth;
+        carouselContainer.scrollTo({
+          left: newScrollPosition,
+          behavior: "smooth",
+        });
+      }
+
+      setInterval(autoSlide, 5000);
+    </script>
   </body>
 </html>
