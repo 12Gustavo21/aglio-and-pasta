@@ -1,4 +1,4 @@
-import tabela from './tabela.js';
+import tabela from './tabela2.js';
 
 function estrelas(nota){
   let estrela = ''
@@ -25,16 +25,11 @@ function estrelas(nota){
   return estrela
 }
 
-function desconto(preco, desconto){
-  let tirar = (100-desconto)/100
-  let valorFinal = (preco*tirar)
-  return valorFinal.toFixed(2)
-}
 document.addEventListener('DOMContentLoaded', function() {
-    const principal = document.querySelector("#delicious");
+    const principal = document.querySelector("#collections");
     
     if (!principal) {
-        console.error('Elemento #delicious não encontrado');
+        console.error('Elemento #collections não encontrado');
         return;
     }
 
@@ -48,10 +43,10 @@ document.addEventListener('DOMContentLoaded', function() {
     gridContainer.innerHTML = '';
     let itemsParaMostrar;
     
-    if (tabela.length >= 6) {
-        itemsParaMostrar = tabela.slice(0, 6);
+    if (tabela.length >= 8) {
+        itemsParaMostrar = tabela.slice(0, 8);
     } else {
-        itemsParaMostrar = tabela.slice(0, Math.min(3, tabela.length));
+        itemsParaMostrar = tabela.slice(0, Math.min(4, tabela.length));
     }
 
     console.log(`Total de itens disponíveis: ${tabela.length}`);
@@ -59,20 +54,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     itemsParaMostrar.forEach((item) => gridContainer.innerHTML += `
-    <div class="rounded-lg overflow-hidden shadow-lg" data-aos="fade-up">
-      <img
-        src="${item.imagePath}"
-        alt="${item.name}"
-        class="w-full h-48 object-cover"
-      />
-      <div class="p-4">
-        <div class="flex text-orange-700 mb-2">${estrelas(item.rating)}</div>
-        <h3 class="text-lg font-semibold mb-2">${item.name}</h3>
-        <div class="flex items-center">
-          <span class="text-sm text-gray-600">${item.category}</span>
-          <del>${item.price}</del> 
-          ${desconto(item.price,item.desconto)}
-        </div>
-      </div>
-    </div>`)
+    <div class="relative h-64 rounded-lg overflow-hidden group">
+          <img
+            src="${item.imagePath}"
+            alt="Sushi"
+            class="w-full h-full object-cover"
+          />
+          <div class="absolute inset-0 bg-black opacity-50"></div>
+          <div class="absolute inset-0 flex items-end p-6">
+            <div>
+              <h3 class="text-white text-xl font-bold mb-2">
+              ${item.name}
+              </h3>
+              <button
+                class="bg-white text-black px-4 py-1 rounded-full text-sm opacity-0 group-hover:opacity-100 transition-opacity"
+              >
+                View Collection
+              </button>
+            </div>
+          </div>
+        </div>`)
 });
