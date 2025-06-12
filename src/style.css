@@ -4,25 +4,27 @@
 .carousel-item {
   scroll-snap-align: start;
 }
+
 .carousel {
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
+
 .carousel::-webkit-scrollbar {
   display: none;
 }
+
 .italian-flag-gradient {
-  background: linear-gradient(
-    90deg,
-    #009246 0%,
-    #009246 33%,
-    #ffffff 33%,
-    #ffffff 66%,
-    #ce2b37 66%,
-    #ce2b37 100%
-  );
+  background: linear-gradient(90deg,
+      #009246 0%,
+      #009246 33%,
+      #ffffff 33%,
+      #ffffff 66%,
+      #ce2b37 66%,
+      #ce2b37 100%);
 }
+
 .italian-text-shadow {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
@@ -30,6 +32,31 @@
 .tstbite-animation {
   transition: transform 0.3s ease;
 }
+
 .tstbite-animation:hover {
   transform: scale(1.1);
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.category-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.category-image {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
 }

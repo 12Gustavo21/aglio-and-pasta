@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aglio & Pasta - Categories</title>
+  <link
+  href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+  rel="stylesheet"
+  />
+  <link rel="stylesheet" href="/src/style.css">
+  <script type="module" src="src/supercat.js"></script>
+</head>
+
+<body class="bg-gray-50 font-inter">
+  <!-- Header -->
+  <header class="bg-white shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <h1 class="text-2xl font-playfair font-bold text-gray-900">Aglio & Pasta</h1>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="hidden md:flex space-x-8">
+          <div class="relative group">
+            <button class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium flex items-center">
+              Homepage
+              <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="relative group">
+            <button class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium flex items-center">
+              Recipe Page
+              <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="relative group">
+            <button class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium flex items-center">
+              Pages
+              <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+          </div>
+          <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">Buy</a>
+        </nav>
+
+        <!-- Search and Profile -->
+        <div class="flex items-center space-x-4">
+          <button class="text-gray-600 hover:text-gray-900">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+          </button>
+          <!-- <div class="w-8 h-8 bg-orange-400 rounded-full flex items-center justify-center">
+            <span class="text-white text-sm font-medium">👨‍🍳</span>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Page Title -->
+    <div class="text-center mb-16">
+      <h1 class="text-5xl font-playfair font-bold text-gray-900 mb-4">Categories</h1>
+    </div>
+
+    <!-- Categories Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12" id="categories">
+      <!-- Row 1 -->
+      <div class="category-card flex flex-col items-center text-center cursor-pointer">
+        <div class="category-image mb-4 bg-gradient-to-br from-blue-100 to-blue-50 flex items-center justify-center">
+          <img src="https://images.unsplash.com/photo-1621996346565-e3dbc353d946?w=300&h=300&fit=crop&crop=center"
+            alt="Pasta" class="category-image">
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900">Pasta</h3>
+      </div>
+
+      <div class="category-card flex flex-col items-center text-center cursor-pointer">
+        <div class="category-image mb-4 bg-gradient-to-br from-red-100 to-red-50 flex items-center justify-center">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=300&h=300&fit=crop&crop=center"
+            alt="Pizza" class="category-image">
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900">Pizza</h3>
+      </div>
+
+      <div class="category-card flex flex-col items-center text-center cursor-pointer">
+        <div class="category-image mb-4 bg-gradient-to-br from-green-100 to-green-50 flex items-center justify-center">
+          <img src="https://images.unsplash.com/photo-1567320425453-7c3318169fb4?w=300&h=300&fit=crop&crop=center"
+            alt="Risotto" class="category-image">
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900">Risotto</h3>
+      </div>
+
+      <div class="category-card flex flex-col items-center text-center cursor-pointer">
+        <div class="category-image mb-4 bg-gradient-to-br from-purple-100 to-purple-50 flex items-center justify-center">
+          <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=300&h=300&fit=crop&crop=center"
+            alt="Desserts" class="category-image">
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900">Desserts</h3>
+      </div>
+    
+      <!-- Row 2 -->
+      <div class="category-card flex flex-col items-center text-center cursor-pointer">
+        <div class="category-image mb-4 bg-gradient-to-br from-purple-100 to-purple-50 flex items-center justify-center">
+          <img src="https://images.unsplash.com/photo-1541833163993-d0130466d7e0?w=300&h=300&fit=crop&crop=center"
+            alt="Appetizers" class="category-image">
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900">Appetizers</h3>
+      </div>
+
+      <div class="category-card flex flex-col items-center text-center cursor-pointer">
+        <div class="category-image mb-4 bg-gradient-to-br from-indigo-100 to-indigo-50 flex items-center justify-center">
+          <img src="https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=300&h=300&fit=crop&crop=center"
+            alt="Wines" class="category-image">
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900">Wines</h3>
+      </div>
+
+      <div class="category-card flex flex-col items-center text-center cursor-pointer">
+        <div class="category-image mb-4 bg-gradient-to-br from-amber-100 to-amber-50 flex items-center justify-center">
+          <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=300&h=300&fit=crop&crop=center"
+            alt="Soup" class="category-image">
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900">Soup</h3>
+      </div>
+
+      <div class="category-card flex flex-col items-center text-center cursor-pointer">
+        <div class="category-image mb-4 bg-gradient-to-br from-orange-100 to-orange-50 flex items-center justify-center">
+          <img src="https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=300&h=300&fit=crop&crop=center"
+            alt="Seafood" class="category-image">
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900">Seafood</h3>
+      </div>
+
+      <!-- Row 3 -->
+
+      <div class="category-card flex flex-col items-center text-center cursor-pointer">
+        <div class="category-image mb-4 bg-gradient-to-br from-yellow-100 to-yellow-50 flex items-center justify-center">
+          <img src="https://images.unsplash.com/photo-1571197119282-7c4d3c69ec0a?w=300&h=300&fit=crop&crop=center"
+            alt="Gnocchi" class="category-image">
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900">Gnocchi</h3>
+      </div>
+
+      <div class="category-card flex flex-col items-center text-center cursor-pointer">
+        <div class="category-image mb-4 bg-gradient-to-br from-pink-100 to-pink-50 flex items-center justify-center">
+          <img src="https://images.unsplash.com/photo-1586999768151-6d4c4f2ff55a?w=300&h=300&fit=crop&crop=center"
+            alt="Antipasti" class="category-image">
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900">Antipasti</h3>
+      </div>
+
+      <div class="category-card flex flex-col items-center text-center cursor-pointer">
+        <div class="category-image mb-4 bg-gradient-to-br from-gray-100 to-gray-50 flex items-center justify-center">
+          <img src="https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=300&h=300&fit=crop&crop=center"
+            alt="Lasagna" class="category-image">
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900">Lasagna</h3>
+      </div>
+
+      <div class="category-card flex flex-col items-center text-center cursor-pointer">
+        <div class="category-image mb-4 bg-gradient-to-br from-green-100 to-green-50 flex items-center justify-center">
+          <img src="https://images.unsplash.com/photo-1607532941433-304659e8198a?w=300&h=300&fit=crop&crop=center"
+            alt="Salad" class="category-image">
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900">Salad</h3>
+      </div>
+
+      <!-- Row 4 -->
+      <div class="category-card flex flex-col items-center text-center cursor-pointer">
+        <div class="category-image mb-4 bg-gradient-to-br from-orange-100 to-orange-50 flex items-center justify-center">
+          <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=300&h=300&fit=crop&crop=center"
+            alt="Bruschetta" class="category-image">
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900">Bruschetta</h3>
+      </div>
+      
+      <div class="category-card flex flex-col items-center text-center cursor-pointer">
+        <div class="category-image mb-4 bg-gradient-to-br from-blue-100 to-blue-50 flex items-center justify-center">
+          <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=300&h=300&fit=crop&crop=center"
+            alt="Gelato" class="category-image">
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900">Gelato</h3>
+      </div>
+
+      <div class="category-card flex flex-col items-center text-center cursor-pointer">
+        <div class="category-image mb-4 bg-gradient-to-br from-yellow-100 to-orange-50 flex items-center justify-center">
+          <img src="https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=300&h=300&fit=crop&crop=center"
+            alt="Polenta" class="category-image">
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900">Polenta</h3>
+      </div>
+
+      <div class="category-card flex flex-col items-center text-center cursor-pointer">
+        <div class="category-image mb-4 bg-gradient-to-br from-red-100 to-red-50 flex items-center justify-center">
+          <img src="https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?w=300&h=300&fit=crop&crop=center"
+            alt="Focaccia" class="category-image">
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900">Focaccia</h3>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200 mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Company Info -->
+        <div class="col-span-1 md:col-span-2">
+          <h3 class="text-2xl font-playfair font-bold text-gray-900 italic mb-4">Aglio & Pasta</h3>
+          <p class="text-gray-600 text-sm leading-relaxed max-w-md">
+            "La cucina italiana non è solo cibo, è un modo di vivere. Ogni piatto racconta una storia, ogni ricetta è una tradizione che passa di generazione in generazione."
+          </p>
+        </div>
+
+        <!-- Aglio & Pasta Links -->
+        <div>
+          <h4 class="text-sm font-semibold text-gray-900 mb-4">Aglio & Pasta</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="text-gray-600 hover:text-gray-900">About us</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-gray-900">Careers</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-gray-900">Contact Us</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-gray-900">Feedback</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal Links -->
+        <div>
+          <h4 class="text-sm font-semibold text-gray-900 mb-4">Legal</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="text-gray-600 hover:text-gray-900">Terms</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-gray-900">Conditions</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-gray-900">Cookies</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-gray-900">Copyright</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Footer -->
+      <div class="border-t border-gray-200 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-500 text-sm">© 2020 Aglio & Pasta - All rights reserved</p>
+
+        <!-- Social Media -->
+        <div class="flex space-x-4 mt-4 md:mt-0">
+          <a href="#" class="text-gray-400 hover:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+            </svg>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z" />
+            </svg>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012 0z" />
+            </svg>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
