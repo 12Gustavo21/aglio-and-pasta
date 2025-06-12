@@ -9,7 +9,7 @@ const itemsData = [
     desconto: 10
   },
   {
-    imagePath: "./src/img/menus/menu2.png",
+    imagePath: "./src/img/menus/menu3.png",
     name: "Bruschetta al Pomodoro",
     description: "Fatias de pão italiano tostado com tomates frescos picados, alho, manjericão e azeite de oliva extra virgem.",
     category: "entradas",
@@ -18,7 +18,7 @@ const itemsData = [
     desconto: 5
   },
   {
-    imagePath: "./src/img/menus/menu3.png",
+    imagePath: "./src/img/menus/menu2.png",
     name: "Pizza Margherita",
     description: "A clássica pizza italiana com molho de tomate San Marzano, muçarela fresca, manjericão e um fio de azeite.",
     category: "pizzas",

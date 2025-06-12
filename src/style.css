@@ -45,13 +45,17 @@
   font-family: 'Inter', sans-serif;
 }
 
-.category-card {
+.category-image, .title-category {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.category-card:hover {
+.category-card:hover .title-category {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.category-card:hover .category-image img {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.040);
 }
 
 .category-image {
