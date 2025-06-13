@@ -27,6 +27,8 @@ function estrelas(nota) {
 function desconto(preco, desconto) {
   let tirar = (100 - desconto) / 100;
   let valorFinal = preco * tirar;
+  valorFinal = Math.ceil(valorFinal)
+  valorFinal = valorFinal-0.1
   return valorFinal.toFixed(2);
 }
 // Proposta 1: Design Limpo e Moderno
