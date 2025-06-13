@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const categories = itemsData.slice(0, 6);
 
     categories.forEach((item) => gridContainer.innerHTML += `
-    <a href="category.html" class="group block text-center" data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="top-bottom">
+    <a href="#" class="group block text-center" data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="top-bottom">
       <figure>
         <div class="relative w-24 h-24 md:w-40 md:h-40 mx-auto">
           <img
