@@ -48,11 +48,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const ul = document.getElementById('listaProdutos');
     itemsData.forEach((item) => {
         const li = document.createElement("li");
-        // https://meusite.com.br/produto/${item.name.replace(/\s+/g, '-').toLowerCase()}
         li.innerHTML = `
-        <a href="#">
-            <img width="50" src="${item.imagePath}">
-            <span class="item-name">${item.name}</span>
+        <a href="#" class="flex items-center w-full px-4 py-2 text-gray-700 hover:bg-amber-50 transition-colors duration-200">
+            <img class="w-12 h-12 object-cover rounded-md mr-4" src="${item.imagePath}">
+            <span class="item-name font-medium">${item.name}</span>
         </a>
         `;
         ul.appendChild(li);

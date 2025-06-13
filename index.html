@@ -1,48 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aglio & Pasta</title>
-    <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
-    rel="stylesheet"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="shortcut icon" href="./Logo.svg" type="image/x-icon" />
-    <link rel="stylesheet" href="/src/style.css" />
-    <script type="module" src="./src/super.js"></script>
-    <script type="module" src="./src/super2.js"></script>
-    <script type="module" src="./src/supercat-home.js"></script>
-  </head>
-  <body class="bg-white text-gray-900">
-    <!-- Navbar -->
 
-    <nav class="container mx-auto px-4 py-6">
-      <div class="flex justify-between items-center">
-        <button class="text-gray-600">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-          </svg>
-        </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aglio & Pasta</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="shortcut icon" href="./Logo.svg" type="image/x-icon" />
+  <link rel="stylesheet" href="/src/style.css" />
+  <script type="module" src="./src/super.js"></script>
+  <script type="module" src="./src/super2.js"></script>
+  <script type="module" src="./src/supercat-home.js"></script>
+</head>
+
+<body class="bg-white text-gray-900">
+  <!-- Navbar -->
+
+  <nav class="container mx-auto px-4 py-6 flex justify-center flex-col items-center">
+    <div class="flex justify-between items-center">
+      <button class="text-gray-600">
         <h1 class="text-4xl font-bold" style="font-family: 'Playfair Display', serif">
           Aglio & Pasta
         </h1>
-        <button class="text-gray-600">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-      </div>
-      <div class="flex justify-center space-x-8 mt-6">
-        <a href="#" class="text-gray-600 hover:text-gray-900">Home Page</a>
-        <a href="./cardapio.html" class="text-gray-600 hover:text-gray-900">Recipe Page</a>
-        <a href="#" class="text-gray-600 hover:text-gray-900">Pages</a>
-        <a href="#" class="text-gray-600 hover:text-gray-900">Elements</a>
-        <a href="#" class="text-gray-600 hover:text-gray-900">Buy</a>
-      </div>
-    </nav>
+    </div>
+    <div class="flex justify-center space-x-8 mt-6">
+      <a href="#" class="text-gray-600 hover:text-gray-900">Home Page</a>
+      <a href="./categories.html" class="text-gray-600 hover:text-gray-900">Categories</a>
+      <a href="#" class="text-gray-600 hover:text-gray-900">Products</a>
+      <a href="#" class="text-gray-600 hover:text-gray-900">About us</a>
+    </div>
+  </nav>
   </header>
 
   <!-- Hero Section -->
@@ -101,28 +91,23 @@
   </div>
 
   <section class="container mx-auto px-6 my-8 md:my-12">
-    <h2 class="text-4xl font-bold text-left text-gray-800 mb-12" style="font-family: 'Playfair Display', serif">
+    <h2 class="text-4xl font-bold text-left text-gray-800 mb-12" style="font-family: 'Playfair Display', serif"
+      data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="top-bottom">
       Popular Categories
     </h2>
-      <div class="container-cats grid grid-cols-3 lg:grid-cols-6 gap-x-4 gap-y-8">
-        <a href="category.html" class="group block text-center">
-          <figure>
-            <div class="relative w-24 h-24 md:w-40 md:h-40 mx-auto">
-              <img
-                src="src/img/menus/menu1.png"
-                alt="Pasta"
-                class="w-full h-full object-cover rounded-full shadow-md transition-transform duration-300 group-hover:scale-110"
-              />
-            </div>
-            <figcaption class="mt-4">
-              <span
-                class="font-semibold text-gray-700 transition-colors group-hover:text-red-600"
-                >Pasta</span
-              >
-            </figcaption>
-          </figure>
-        </a>
-      <a href="category.html" class="group block text-center">
+    <div class="container-cats grid grid-cols-3 lg:grid-cols-6 gap-x-4 gap-y-8">
+      <a href="./categories.html" class="group block text-center">
+        <figure>
+          <div class="relative w-24 h-24 md:w-40 md:h-40 mx-auto">
+            <img src="src/img/menus/menu1.png" alt="Pasta"
+              class="w-full h-full object-cover rounded-full shadow-md transition-transform duration-300 group-hover:scale-110" />
+          </div>
+          <figcaption class="mt-4">
+            <span class="font-semibold text-gray-700 transition-colors group-hover:text-red-600">Pasta</span>
+          </figcaption>
+        </figure>
+      </a>
+      <a href="./categories.html" class="group block text-center">
         <figure>
           <div class="relative w-24 h-24 md:w-40 md:h-40 mx-auto">
             <img src="src/img/menus/menu2.png" alt="Pizzas"
@@ -134,7 +119,7 @@
         </figure>
       </a>
 
-      <a href="category.html" class="group block text-center">
+      <a href="./categories.html" class="group block text-center">
         <figure>
           <div class="relative w-24 h-24 md:w-40 md:h-40 mx-auto">
             <img src="src/img/menus/menu3.png" alt="Risottos"
@@ -146,7 +131,7 @@
         </figure>
       </a>
 
-      <a href="category.html" class="group block text-center">
+      <a href="./categories.html" class="group block text-center">
         <figure>
           <div class="relative w-24 h-24 md:w-40 md:h-40 mx-auto">
             <img src="src/img/menus/menu4.png" alt="Desserts"
@@ -158,7 +143,7 @@
         </figure>
       </a>
 
-      <a href="category.html" class="group block text-center">
+      <a href="./categories.html" class="group block text-center">
         <figure>
           <div class="relative w-24 h-24 md:w-40 md:h-40 mx-auto">
             <img src="src/img/menus/menu5.png" alt="Appetizers"
@@ -170,7 +155,7 @@
         </figure>
       </a>
 
-      <a href="category.html" class="group block text-center">
+      <a href="./categories.html" class="group block text-center">
         <figure>
           <div class="relative w-24 h-24 md:w-40 md:h-40 mx-auto">
             <img src="src/img/menus/menu6.png" alt="Wines"
@@ -205,32 +190,79 @@
 
 
   <!-- Footer -->
-  <footer class="container mx-auto px-4 py-12">
-    <div class="flex justify-between items-start">
-      <div class="max-w-xs">
-        <h1 class="text-2xl font-bold mb-4 text-gray-600" style="font-family: 'Playfair Display', serif">
-          Tastebite
-        </h1>
-        <p class="text-gray-600 text-sm">
-          A website focused on restaurants and their orders
-        </p>
-      </div>
-      <div class="flex space-x-12">
+  <footer class="bg-white border-t border-gray-200 mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Company Info -->
+        <div class="col-span-1 md:col-span-2">
+          <h3 class="text-2xl font-playfair font-bold text-gray-900 italic mb-4">
+            Aglio & Pasta
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed max-w-md">
+            "La cucina italiana non è solo cibo, è un modo di vivere. Ogni
+            piatto racconta una storia, ogni ricetta è una tradizione che
+            passa di generazione in generazione."
+          </p>
+        </div>
+
+        <!-- Aglio & Pasta Links -->
         <div>
-          <h3 class="font-semibold mb-4">Categories</h3>
-          <ul class="space-y-2 text-sm text-gray-600">
-            <li><a href="#" class="hover:text-gray-900">Breakfast</a></li>
-            <li><a href="#" class="hover:text-gray-900">Lunch</a></li>
-            <li><a href="#" class="hover:text-gray-900">Dinner</a></li>
+          <h4 class="text-sm font-semibold text-gray-900 mb-4">
+            Aglio & Pasta
+          </h4>
+          <ul class="space-y-2 text-sm">
+            <li>
+              <a href="../index.html" class="text-gray-600 hover:text-gray-900">Homepage</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-600 hover:text-gray-900">Categories</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-600 hover:text-gray-900">Products</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-600 hover:text-gray-900">About Us</a>
+            </li>
           </ul>
         </div>
+
+        <!-- Legal Links -->
         <div>
-          <h3 class="font-semibold mb-4">About</h3>
-          <ul class="space-y-2 text-sm text-gray-600">
-            <li><a href="#" class="hover:text-gray-900">About Us</a></li>
-            <li><a href="#" class="hover:text-gray-900">Contact</a></li>
-            <li><a href="#" class="hover:text-gray-900">Terms</a></li>
+          <h4 class="text-sm font-semibold text-gray-900 mb-4">Legal</h4>
+          <ul class="space-y-2 text-sm">
+            <li>
+              <a href="#" class="text-gray-600 hover:text-gray-900">Terms</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-600 hover:text-gray-900">Conditions</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-600 hover:text-gray-900">Cookies</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-600 hover:text-gray-900">Copyright</a>
+            </li>
           </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Footer -->
+      <div class="border-t border-gray-200 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-500 text-sm">
+          © 2020 Aglio & Pasta - All rights reserved
+        </p>
+
+        <!-- Social Media -->
+        <div class="flex space-x-4 mt-4 md:mt-0">
+          <a href="#" class="text-gray-400 hover:text-gray-600">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-gray-600">
+            <i class="fa-brands fa-pinterest"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-gray-600">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
         </div>
       </div>
     </div>

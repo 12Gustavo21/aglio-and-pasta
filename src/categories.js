@@ -1,14 +1,14 @@
 const itemsData = [
   {
-    imagePath: "https://images.unsplash.com/photo-1621996346565-e3dbc353d946?w=300&h=300&fit=crop&crop=center",
+    imagePath: "https://images.unsplash.com/photo-1516100882582-96c3a05fe590?w=300&h=300&fit=crop&crop=center",
     name: "Massas"
   },
   {
-    imagePath: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=300&h=300&fit=crop&crop=center",
+    imagePath: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002??w=300&h=300&fit=crop&crop=center",
     name: "Pizzas"
   },
   {
-    imagePath: "https://images.unsplash.com/photo-1567320425453-7c3318169fb4?w=300&h=300&fit=crop&crop=center",
+    imagePath: "https://images.unsplash.com/photo-1664214649073-f4250ad39390?w=300&h=300&fit=crop&crop=center",
     name: "Rissotos"
   },
   {
@@ -16,7 +16,7 @@ const itemsData = [
     name: "Desserts"
   },
   {
-    imagePath: "https://images.unsplash.com/photo-1541833163993-d0130466d7e0?w=300&h=300&fit=crop&crop=center",
+    imagePath: "https://images.unsplash.com/photo-1527751171053-6ac5ec50000b?w=300&h=300&fit=crop&crop=center",
     name: "Appetizers"
   },
   {
@@ -32,11 +32,11 @@ const itemsData = [
     name: "Seafood"
   },
   {
-    imagePath: "https://images.unsplash.com/photo-1571197119282-7c4d3c69ec0a?w=300&h=300&fit=crop&crop=center",
+    imagePath: "https://media.istockphoto.com/id/1874524634/pt/foto/hot-potato-gnocchi-with-traditional-bolognese-sauce-and-parmesan-cheese-closeup-on-the-plate.jpg?s=612x612&w=0&k=20&c=m4SLURLti8JETpS8ZCPT2PYeurf8lC34rfT9rlrAanc=",
     name: "Gnocchi"
   },
   {
-    imagePath: "https://images.unsplash.com/photo-1586999768151-6d4c4f2ff55a?w=300&h=300&fit=crop&crop=center",
+    imagePath: "https://images.unsplash.com/photo-1667207402758-c69305623ea0?w=300&h=300&fit=crop&crop=center",
     name: "Antipasti"
   },
   {
@@ -56,11 +56,11 @@ const itemsData = [
     name: "Gelato"
   },
   {
-    imagePath: "https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=300&h=300&fit=crop&crop=center",
+    imagePath: "https://media.istockphoto.com/id/525615391/pt/foto/polenta.webp?a=1&b=1&s=612x612&w=0&k=20&c=cS9iK3w4xIY8mWV8re_M8KfXpGBaiXPggJIuYGlJnb0=",
     name: "Polenta"
   },
   {
-    imagePath: "https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?w=300&h=300&fit=crop&crop=center",
+    imagePath: "https://images.unsplash.com/photo-1619452357216-e88ca8119eeb?w=300&h=300&fit=crop&crop=center",
     name: "Focaccia"
   }
 ];
