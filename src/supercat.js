@@ -16,5 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
         <img src="${item.imagePath}" alt="${item.name}" class="category-image">
       </div>
       <h3 class="title-category text-lg font-semibold text-gray-900">${item.name}</h3>
+      </a>
     </div>`)
 });

@@ -1,4 +1,4 @@
-import itemsData from './tabela.js';
+import itemsData from './categories.js';
 
 function filtrar() {
     var input,
