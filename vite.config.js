@@ -11,7 +11,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        nested: resolve(__dirname, "./src/categories.html"),
+        nested: resolve(__dirname, "./categories.html"),
       },
     },
   },
