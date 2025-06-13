@@ -62,7 +62,11 @@ const itemsData = [
   {
     imagePath: "https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?w=300&h=300&fit=crop&crop=center",
     name: "Focaccia"
-  }
+  },
+  {
+    imagePath: "https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?w=300&h=300&fit=crop&crop=center",
+    name: "Cappuccino",
+  },
 ];
 
 export default itemsData;

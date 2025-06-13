@@ -9,7 +9,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/src/style.css" />
-    <link rel="stylesheet" href="/src/barra-pesquisa.css">
+    <link rel="stylesheet" href="/src/barra-pesquisa.css" />
     <script type="module" src="src/supercat.js"></script>
     <script type="module" src="src/filtrar.js"></script>
   </head>
@@ -94,9 +94,12 @@
             >
           </nav>
           <div class="buscar">
-            <input id="inputBusca" type="text" placeholder="O que você procura?">
-            <ul id="listaProdutos">
-            </ul>
+            <input
+              id="inputBusca"
+              type="text"
+              placeholder="O que você procura?"
+            />
+            <ul id="listaProdutos"></ul>
           </div>
           <!-- Search and Profile -->
           <div class="flex items-center space-x-4">
@@ -136,252 +139,7 @@
       <div
         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12"
         id="categories"
-      >
-        <!-- Row 1 -->
-        <div
-          class="category-card flex flex-col items-center text-center cursor-pointer"
-        >
-          <div
-            class="category-image mb-4 bg-gradient-to-br from-blue-100 to-blue-50 flex items-center justify-center"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1621996346565-e3dbc353d946?w=300&h=300&fit=crop&crop=center"
-              alt="Pasta"
-              class="category-image"
-            />
-          </div>
-          <h3 class="text-lg font-semibold text-gray-900">Pasta</h3>
-        </div>
-
-        <div
-          class="category-card flex flex-col items-center text-center cursor-pointer"
-        >
-          <div
-            class="category-image mb-4 bg-gradient-to-br from-red-100 to-red-50 flex items-center justify-center"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=300&h=300&fit=crop&crop=center"
-              alt="Pizza"
-              class="category-image"
-            />
-          </div>
-          <h3 class="text-lg font-semibold text-gray-900">Pizza</h3>
-        </div>
-
-        <div
-          class="category-card flex flex-col items-center text-center cursor-pointer"
-        >
-          <div
-            class="category-image mb-4 bg-gradient-to-br from-green-100 to-green-50 flex items-center justify-center"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1567320425453-7c3318169fb4?w=300&h=300&fit=crop&crop=center"
-              alt="Risotto"
-              class="category-image"
-            />
-          </div>
-          <h3 class="text-lg font-semibold text-gray-900">Risotto</h3>
-        </div>
-
-        <div
-          class="category-card flex flex-col items-center text-center cursor-pointer"
-        >
-          <div
-            class="category-image mb-4 bg-gradient-to-br from-purple-100 to-purple-50 flex items-center justify-center"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=300&h=300&fit=crop&crop=center"
-              alt="Desserts"
-              class="category-image"
-            />
-          </div>
-          <h3 class="text-lg font-semibold text-gray-900">Desserts</h3>
-        </div>
-
-        <!-- Row 2 -->
-        <div
-          class="category-card flex flex-col items-center text-center cursor-pointer"
-        >
-          <div
-            class="category-image mb-4 bg-gradient-to-br from-purple-100 to-purple-50 flex items-center justify-center"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1541833163993-d0130466d7e0?w=300&h=300&fit=crop&crop=center"
-              alt="Appetizers"
-              class="category-image"
-            />
-          </div>
-          <h3 class="text-lg font-semibold text-gray-900">Appetizers</h3>
-        </div>
-
-        <div
-          class="category-card flex flex-col items-center text-center cursor-pointer"
-        >
-          <div
-            class="category-image mb-4 bg-gradient-to-br from-indigo-100 to-indigo-50 flex items-center justify-center"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=300&h=300&fit=crop&crop=center"
-              alt="Wines"
-              class="category-image"
-            />
-          </div>
-          <h3 class="text-lg font-semibold text-gray-900">Wines</h3>
-        </div>
-
-        <div
-          class="category-card flex flex-col items-center text-center cursor-pointer"
-        >
-          <div
-            class="category-image mb-4 bg-gradient-to-br from-amber-100 to-amber-50 flex items-center justify-center"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=300&h=300&fit=crop&crop=center"
-              alt="Soup"
-              class="category-image"
-            />
-          </div>
-          <h3 class="text-lg font-semibold text-gray-900">Soup</h3>
-        </div>
-
-        <div
-          class="category-card flex flex-col items-center text-center cursor-pointer"
-        >
-          <div
-            class="category-image mb-4 bg-gradient-to-br from-orange-100 to-orange-50 flex items-center justify-center"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=300&h=300&fit=crop&crop=center"
-              alt="Seafood"
-              class="category-image"
-            />
-          </div>
-          <h3 class="text-lg font-semibold text-gray-900">Seafood</h3>
-        </div>
-
-        <!-- Row 3 -->
-
-        <div
-          class="category-card flex flex-col items-center text-center cursor-pointer"
-        >
-          <div
-            class="category-image mb-4 bg-gradient-to-br from-yellow-100 to-yellow-50 flex items-center justify-center"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1571197119282-7c4d3c69ec0a?w=300&h=300&fit=crop&crop=center"
-              alt="Gnocchi"
-              class="category-image"
-            />
-          </div>
-          <h3 class="text-lg font-semibold text-gray-900">Gnocchi</h3>
-        </div>
-
-        <div
-          class="category-card flex flex-col items-center text-center cursor-pointer"
-        >
-          <div
-            class="category-image mb-4 bg-gradient-to-br from-pink-100 to-pink-50 flex items-center justify-center"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1586999768151-6d4c4f2ff55a?w=300&h=300&fit=crop&crop=center"
-              alt="Antipasti"
-              class="category-image"
-            />
-          </div>
-          <h3 class="text-lg font-semibold text-gray-900">Antipasti</h3>
-        </div>
-
-        <div
-          class="category-card flex flex-col items-center text-center cursor-pointer"
-        >
-          <div
-            class="category-image mb-4 bg-gradient-to-br from-gray-100 to-gray-50 flex items-center justify-center"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=300&h=300&fit=crop&crop=center"
-              alt="Lasagna"
-              class="category-image"
-            />
-          </div>
-          <h3 class="text-lg font-semibold text-gray-900">Lasagna</h3>
-        </div>
-
-        <div
-          class="category-card flex flex-col items-center text-center cursor-pointer"
-        >
-          <div
-            class="category-image mb-4 bg-gradient-to-br from-green-100 to-green-50 flex items-center justify-center"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1607532941433-304659e8198a?w=300&h=300&fit=crop&crop=center"
-              alt="Salad"
-              class="category-image"
-            />
-          </div>
-          <h3 class="text-lg font-semibold text-gray-900">Salad</h3>
-        </div>
-
-        <!-- Row 4 -->
-        <div
-          class="category-card flex flex-col items-center text-center cursor-pointer"
-        >
-          <div
-            class="category-image mb-4 bg-gradient-to-br from-orange-100 to-orange-50 flex items-center justify-center"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=300&h=300&fit=crop&crop=center"
-              alt="Bruschetta"
-              class="category-image"
-            />
-          </div>
-          <h3 class="text-lg font-semibold text-gray-900">Bruschetta</h3>
-        </div>
-
-        <div
-          class="category-card flex flex-col items-center text-center cursor-pointer"
-        >
-          <div
-            class="category-image mb-4 bg-gradient-to-br from-blue-100 to-blue-50 flex items-center justify-center"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=300&h=300&fit=crop&crop=center"
-              alt="Gelato"
-              class="category-image"
-            />
-          </div>
-          <h3 class="text-lg font-semibold text-gray-900">Gelato</h3>
-        </div>
-
-        <div
-          class="category-card flex flex-col items-center text-center cursor-pointer"
-        >
-          <div
-            class="category-image mb-4 bg-gradient-to-br from-yellow-100 to-orange-50 flex items-center justify-center"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=300&h=300&fit=crop&crop=center"
-              alt="Polenta"
-              class="category-image"
-            />
-          </div>
-          <h3 class="text-lg font-semibold text-gray-900">Polenta</h3>
-        </div>
-
-        <div
-          class="category-card flex flex-col items-center text-center cursor-pointer"
-        >
-          <div
-            class="category-image mb-4 bg-gradient-to-br from-red-100 to-red-50 flex items-center justify-center"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?w=300&h=300&fit=crop&crop=center"
-              alt="Focaccia"
-              class="category-image"
-            />
-          </div>
-          <h3 class="text-lg font-semibold text-gray-900">Focaccia</h3>
-        </div>
-      </div>
+      ></div>
     </main>
 
     <!-- Footer -->
