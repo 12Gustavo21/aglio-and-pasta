@@ -79,11 +79,6 @@ const itemsData = [
     name: "Focaccia",
     url: '#',
   },
-  {
-    imagePath: "https://statico.soapcentral.com/editor/2025/04/c9be3-17450004989781.jpg",
-    name: "Cappuccino",
-    url: 'https://www.youtube.com/watch?v=2YEhtf0gMDo',
-  },
 ];
 
 export default itemsData;
