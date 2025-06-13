@@ -1,20 +1,4 @@
-import tabela from "./tabela.js";
-
-function filtrarItens(tabela) {
-        const ul = document.getElementById('listaProdutos');
-        console.log()
-        tabela.forEach((item) => {
-            const li = document.createElement("li");
-            li.innerHTML = `
-            <a href="#">
-                <img width="50"
-                    src="${item.imagePath}">
-                <span class="item-name">${item.name}</span>
-            </a>
-            `;
-            ul.appendChild(li);
-        })
-    }
+import itemsData from './tabela.js';
 
 function filtrar() {
     var input,
@@ -27,47 +11,52 @@ function filtrar() {
         txtValue,
         count = 0
 
-    //PEGAR OS ELEMENTOS HTML
     input = document.getElementById('inputBusca');
     ul = document.getElementById('listaProdutos');
 
-    //FILTRO
     filter = input.value.toUpperCase();
 
-    //PEGAR TODAS AS LI's DA LISTA
     li = ul.getElementsByTagName("li");
 
-    //PERCORRER TODOS OS LI'S
     for (i = 0; i < li.length; i++) {
-        //PEGAR A TAG A DO ELEMENTO PERCORRIDO
         a = li[i].getElementsByTagName("a")[0];
-        //PEGAR O TEXTO DENTRO DO NOSSA TAG A
         txtValue = a.textContent || a.innerText;
-        //VERIFICAR SE O QUE O USUARIO DIGITOU BATE COM O TEXTO DA TAG A
+        
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            //VALOR BATEU
             li[i].style.display = "";
-            //INCREMENTAR O CONTADOR
-            count++
-            //PEGAR A TAG SPAN DO ITEM
+            count++;
             span = li[i].querySelector(".item-name");
-            //SE EXISTIR
             if (span) {
                 span.innerHTML = txtValue.replace(new RegExp(filter, "gi"), (match) => {
                     return "<strong>" + match + "</strong>";
                 })
             }
         } else {
-            //NÃO MOSTRA O ITEM DA LISTA
             li[i].style.display = "none";
         }
     }
     
-	//VERIFICANDO SE TEM ITENS NA LISTA
-     if(filter ===""){ 
-	 ul.style.display = "none";
-	 }else{ 
-	 ul.style.display = "block";
-	 }
-
+    if(filter === ""){ 
+        ul.style.display = "none";
+    } else { 
+        ul.style.display = "block";
+    }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    console.log(itemsData);
+    const ul = document.getElementById('listaProdutos');
+    itemsData.forEach((item) => {
+        const li = document.createElement("li");
+        // https://meusite.com.br/produto/${item.name.replace(/\s+/g, '-').toLowerCase()}
+        li.innerHTML = `
+        <a href="#">
+            <img width="50" src="${item.imagePath}">
+            <span class="item-name">${item.name}</span>
+        </a>
+        `;
+        ul.appendChild(li);
+    });
+
+    document.getElementById('inputBusca').addEventListener('keyup', filtrar);
+});

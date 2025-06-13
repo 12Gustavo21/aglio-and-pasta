@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,63 +9,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/src/style.css" />
+    <link rel="stylesheet" href="/src/barra-pesquisa.css">
     <script type="module" src="src/supercat.js"></script>
     <script type="module" src="src/filtrar.js"></script>
   </head>
-  <style>
-    .buscar{
-      width: 100%;
-      background: #eee;
-      display: flex;
-      flex-flow: column;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-    }
-
-    input{
-      width: 90%;
-      height: 50px;
-      padding-left: 20px;
-      font-size:22px;
-      border:1px solid #ddd;
-      margin:15px;
-      border-radius:5px;
-    }
-
-    #listaProdutos{
-      display: none;   
-      width: 91%;
-      list-style-type: none;
-      margin:0;
-      padding:0;
-      position: absolute;
-      top: 70px;
-    }
-
-    #listaProdutos li a{
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      font-size:18px;
-      color: black;
-      border: 1px solid #ddd;
-      background: #f6f6f6;
-      padding: 12px;
-    }
-
-    #listaProdutos li a:hover{
-      background: #eee;
-    }
-
-    .item-name{
-      margin-left:15px;
-    }
-
-    h1, p{
-      margin-left: 5%;
-    }
-  </style>
   <body class="bg-gray-50 font-inter">
     <!-- Header -->
     <header class="bg-white shadow-sm">
@@ -82,7 +29,8 @@
           <nav class="hidden md:flex space-x-8">
             <div class="relative group">
               <button
-                class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium flex items-center">
+                class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium flex items-center"
+              >
                 Homepage
                 <svg
                   class="ml-1 h-4 w-4"
@@ -146,15 +94,8 @@
             >
           </nav>
           <div class="buscar">
-            <input
-              id="inputBusca"
-              class="buscar border-gray-700 border-solid border-4 text-gray-900"
-              onkeyup="filtrarItens()"
-              placeholder="O que você procura?"
-              type="text"
-            />
+            <input id="inputBusca" type="text" placeholder="O que você procura?">
             <ul id="listaProdutos">
-              <li>items</li>
             </ul>
           </div>
           <!-- Search and Profile -->
