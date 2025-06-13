@@ -1,4 +1,4 @@
-import itemsData from './categories.js';
+import itemsData from './data/categories.js';
 
 function filtrar() {
     var input,

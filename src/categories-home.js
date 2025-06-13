@@ -1,4 +1,4 @@
-import itemsData from './categories.js';
+import itemsData from './data/categories.js';
 
 document.addEventListener('DOMContentLoaded', function() {
     const gridContainer = document.querySelector(".container-cats");

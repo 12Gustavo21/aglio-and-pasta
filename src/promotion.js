@@ -1,4 +1,4 @@
-import tabela from "./tabela.js";
+import tabela from "./data/promotion.js";
 
 function estrelas(nota) {
   let estrela = "";

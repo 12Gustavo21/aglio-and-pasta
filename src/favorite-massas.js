@@ -1,28 +1,4 @@
-import tabela from "./tabela2.js";
-
-function estrelas(nota) {
-  let estrela = "";
-  if (nota % 2 === 0) {
-    for (let i = 0; i < nota / 2; i++) {
-      estrela += '<i class="fa-solid fa-star"></i>';
-    }
-    let nota2 = 10 - nota;
-    for (let i = 0; i < nota2 / 2; i++) {
-      estrela += '<i class="fa-regular fa-star"></i>';
-    }
-  } else {
-    nota -= 1;
-    for (let i = 0; i < nota / 2; i++) {
-      estrela += '<i class="fa-solid fa-star"></i>';
-    }
-    estrela += '<i class="fa-solid fa-star-half-stroke"></i>';
-    let nota2 = 10 - nota;
-    for (let i = 0; i < nota2 / 2 - 1; i++) {
-      estrela += '<i class="fa-regular fa-star"></i>';
-    }
-  }
-  return estrela;
-}
+import tabela from "./data/favorites-massas";
 
 document.addEventListener("DOMContentLoaded", function () {
   const principal = document.querySelector("#collections");
