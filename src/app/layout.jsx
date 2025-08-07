@@ -1,9 +1,5 @@
-// src/app/layout.jsx
-'use client';
-import { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import './global.css';
+// src/app/layout.js
+import Template from './template';
 
 export const metadata = {
   title: 'Aglio & Pasta',
@@ -11,13 +7,6 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      once: true,
-    });
-  }, []);
-
   return (
     <html lang="pt-br">
       <head>
@@ -26,7 +15,7 @@ export default function RootLayout({ children }) {
         <link rel="shortcut icon" href="/Logo.svg" type="image/x-icon" />
       </head>
       <body className="bg-white text-gray-900">
-        {children}
+        <Template>{children}</Template>
       </body>
     </html>
   );
