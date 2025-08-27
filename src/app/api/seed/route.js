@@ -1,4 +1,3 @@
-// src/app/api/seed/route.js
 import { supabase } from '@/lib/supabaseClient'
 import categories from '@/data/categories'
 import favorites from '@/data/favorites-massas'
@@ -21,17 +20,13 @@ export async function GET() {
         continue
       }
 
-      // transforma as chaves para lowercase - ex: imagePath -> imagepath
       const payload = toDbLowercaseArray(item.data)
 
-      // opcional: log para debugar (aparecerá no terminal do dev)
       console.log(`Seeding ${item.name}: primeiro objeto =>`, payload[0])
 
-      // insertar em lote
       const { data, error } = await supabase.from(item.name).insert(payload)
 
       if (error) {
-        // tentativa linha a linha para diagnóstico
         const perRow = []
         for (const row of payload) {
           const r = await supabase.from(item.name).insert(row)

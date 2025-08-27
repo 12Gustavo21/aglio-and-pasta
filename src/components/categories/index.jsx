@@ -1,9 +1,32 @@
+"use client";
 import Link from 'next/link';
 import Image from 'next/image';
-import categoriesData from '../../data/categories';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import { SUPABASE_URL, SUPABASE_ANON_KEY } from '@/lib/supabaseClient';
 
 const Categories = () => {
-  const categories = categoriesData.slice(0, 6);
+  const [categories, setCategories] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    axios.get(`${SUPABASE_URL}/rest/v1/categories?select=*`, {
+      headers: {
+        apikey: SUPABASE_ANON_KEY,
+        Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+      },
+    })
+    .then(response => {
+      setCategories(response.data.slice(0, 6));
+      setLoading(false);
+    })
+    .catch(error => {
+      console.error(error);
+      setLoading(false);
+    });
+  }, []);
+
+  if (loading) return <div>Carregando...</div>;
 
   return (
     <section className="container mx-auto px-6 my-8 md:my-12">
@@ -16,7 +39,7 @@ const Categories = () => {
             <figure>
               <div className="relative w-24 h-24 md:w-40 md:h-40 mx-auto">
                 <Image 
-                  src={category.imagePath} 
+                  src={category.imagepath} 
                   alt={category.name}
                   width={160}
                   height={160}

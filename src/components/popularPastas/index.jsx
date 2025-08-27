@@ -1,7 +1,30 @@
-import favoritesData from '../../data/favorites-massas';
+"use client";
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
+import { SUPABASE_URL, SUPABASE_ANON_KEY } from '@/lib/supabaseClient';
 const PopularPastas = () => {
-  const itemsParaMostrar = favoritesData.slice(0, 8);
+  const [itemsParaMostrar, setItemsParaMostrar] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    axios.get(`${SUPABASE_URL}/rest/v1/favorites_massas?select=*`, {
+      headers: {
+        apikey: SUPABASE_ANON_KEY,
+        Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+      },
+    })
+    .then(response => {
+      setItemsParaMostrar(response.data.slice(0, 8));
+      setLoading(false);
+    })
+    .catch(error => {
+      console.error(error);
+      setLoading(false);
+    });
+  }, []);
+
+  if (loading) return <div>Carregando...</div>;
 
   return (
     <section className="container mx-auto px-4 mb-16" id="collections">
@@ -16,13 +39,13 @@ const PopularPastas = () => {
             data-aos="fade-up"
           >
             <img
-              src={item.imagePath}
+              src={item.imagepath}
               alt={item.name}
               className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
             />
 
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-
+            
             <div className="absolute inset-0 flex items-end p-6">
               <div className="transform transition-transform duration-300 ease-in-out group-hover:-translate-y-2">
                 <h3 className="text-white text-xl font-bold mb-2">
