@@ -5,7 +5,6 @@ import { toDbLowercaseArray } from '@/lib/transform'
 
 const MAP = [
   // { name: 'categories', data: categories },
-  { name: 'favorites_massas', data: favorites },
   { name: 'promotions', data: promotions }
 ]
 
