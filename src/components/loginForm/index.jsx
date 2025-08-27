@@ -1,4 +1,3 @@
-// src/components/loginForm/index.jsx
 "use client";
 
 import { useState, useEffect } from 'react';
@@ -13,7 +12,6 @@ const LoginForm = ({ onSwitchToRegister }) => {
   const [focusedField, setFocusedField] = useState(null);
 
   useEffect(() => {
-    // Refresh AOS quando o componente montar
     AOS.refresh();
   }, []);
 
@@ -27,7 +25,6 @@ const LoginForm = ({ onSwitchToRegister }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Login data:', formData);
-    // Aqui você pode implementar a lógica de login com Supabase
   };
 
   return (

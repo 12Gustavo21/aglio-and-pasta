@@ -60,7 +60,6 @@ const CategoriesContent = () => {
   );
 };
 
-// Componente com dynamic import para evitar hidratação
 const DynamicCategoriesContent = dynamic(() => Promise.resolve(CategoriesContent), {
   ssr: false,
   loading: () => <div className="min-h-screen flex items-center justify-center">Carregando...</div>

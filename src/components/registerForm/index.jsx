@@ -1,4 +1,3 @@
-// src/components/registerForm/index.jsx
 "use client";
 
 import { useState, useEffect } from 'react';
@@ -16,11 +15,9 @@ const RegisterForm = ({ onSwitchToLogin }) => {
   const [focusedField, setFocusedField] = useState(null);
 
   useEffect(() => {
-    // Refresh AOS quando o componente montar
     AOS.refresh();
   }, []);
 
-  // Validação da senha com regex
   const validatePassword = (password) => {
     const minLength = password.length >= 6;
     const hasUpperCase = /[A-Z]/.test(password);
@@ -46,7 +43,6 @@ const RegisterForm = ({ onSwitchToLogin }) => {
       [name]: value
     });
 
-    // Limpar erros quando o usuário começar a digitar
     if (errors[name]) {
       setErrors({
         ...errors,
@@ -60,19 +56,16 @@ const RegisterForm = ({ onSwitchToLogin }) => {
     
     const newErrors = {};
     
-    // Validar username
     if (!formData.username.trim()) {
       newErrors.username = 'Username é obrigatório';
     }
     
-    // Validar email
     if (!formData.email.trim()) {
       newErrors.email = 'Email é obrigatório';
     } else if (!validateEmail(formData.email)) {
       newErrors.email = 'Email inválido';
     }
     
-    // Validar senha
     const passwordValidation = validatePassword(formData.password);
     if (!passwordValidation.isValid) {
       newErrors.password = 'Senha não atende aos requisitos';
@@ -84,7 +77,6 @@ const RegisterForm = ({ onSwitchToLogin }) => {
     }
     
     console.log('Register data:', formData);
-    // Aqui você pode implementar a lógica de registro com Supabase
   };
 
   const passwordValidation = validatePassword(formData.password);
@@ -216,7 +208,7 @@ const RegisterForm = ({ onSwitchToLogin }) => {
             Senha
           </label>
           
-          {/* Requisitos da senha com design elegante */}
+
           {showPasswordRequirements && (
             <div 
               className="mt-3 p-4 bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl border border-amber-100"

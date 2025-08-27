@@ -1,4 +1,3 @@
-// src/services/favoritesService.js
 import api from '@/lib/apiClient'
 
 const resource = '/categories'
