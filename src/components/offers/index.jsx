@@ -1,17 +1,30 @@
-"use client"
-
-import { useState } from 'react';
-import promotionData from '../../data/promotion';
-import { FaStar, FaStarHalfAlt, FaRegStar, FaHeart, FaRegHeart, FaCartPlus } from 'react-icons/fa';
-
-const Offers = () => {
+"use client";
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import { FaHeart, FaRegHeart, FaCartPlus, FaStar, FaStarHalfAlt, FaRegStar } from 'react-icons/fa';
+import { SUPABASE_URL, SUPABASE_ANON_KEY } from '@/lib/supabaseClient';
+const Offers = ({ onAddToCart }) => {
+  const [itemsParaMostrar, setItemsParaMostrar] = useState([]);
   const [favorites, setFavorites] = useState({});
-
-  const calcularDesconto = (preco, desconto) => {
+  const [loading, setLoading] = useState(true);
+    const calcularDesconto = (preco, desconto) => {
     const tirar = (100 - desconto) / 100;
     let valorFinal = preco * tirar;
     valorFinal = Math.ceil(valorFinal);
     return (valorFinal - 0.1).toFixed(2);
+  };
+
+  const addToCart = (item) => {
+    const stored = localStorage.getItem("cart");
+    let cart = stored ? JSON.parse(stored) : [];
+    const existing = cart.find((i) => i.id === item.id);
+    if (existing) {
+      existing.qty = (existing.qty || 1) + 1;
+    } else {
+      cart.push({ ...item, qty: 1 });
+    }
+    localStorage.setItem("cart", JSON.stringify(cart));
+    if (onAddToCart) onAddToCart();
   };
 
   const renderizarEstrelas = (nota) => {
@@ -41,6 +54,24 @@ const Offers = () => {
       [id]: !prev[id]
     }));
   };
+  useEffect(() => {
+    axios.get(`${SUPABASE_URL}/rest/v1/promotions?select=*`, {
+      headers: {
+        apikey: SUPABASE_ANON_KEY,
+        Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+      },
+    })
+    .then(response => {
+      setItemsParaMostrar(response.data.slice(0, 8));
+      setLoading(false);
+    })
+    .catch(error => {
+      console.error(error);
+      setLoading(false);
+    });
+  }, []);
+
+  if (loading) return <div>Carregando...</div>;
 
   return (
     <section className="container mx-auto px-4 mb-16" id="delicious">
@@ -48,7 +79,7 @@ const Offers = () => {
         House Offers
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {promotionData.map((item, index) => (
+        {itemsParaMostrar.map((item, index) => (
           <div 
             key={index}
             className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
@@ -56,7 +87,7 @@ const Offers = () => {
           >
             <div className="relative">
               <img 
-                src={item.imagePath} 
+                src={item.imagepath} 
                 alt={item.name} 
                 className="w-full h-48 object-cover" 
               />
@@ -95,10 +126,13 @@ const Offers = () => {
                   </span>
                   <del className="text-gray-400 text-sm">R${item.price}</del>
                 </div>
-                
-                <button className="bg-orange-100 text-orange-600 hover:bg-orange-500 hover:text-white transition-all duration-300 font-bold w-10 h-10 rounded-full flex items-center justify-center">
-                  <FaCartPlus />
-                </button>
+              <button
+                className="bg-orange-100 text-orange-600 hover:bg-orange-500 hover:text-white transition-all duration-300 font-bold w-10 h-10 rounded-full flex items-center justify-center"
+                onClick={() => addToCart(item)}
+                title="Adicionar ao carrinho"
+              >
+                <FaCartPlus />
+              </button>
               </div>
             </div>
           </div>
@@ -109,3 +143,10 @@ const Offers = () => {
 };
 
 export default Offers;
+
+
+
+
+
+
+
