@@ -37,15 +37,14 @@ const Categories = () => {
         {categories.map((category, index) => (
           <Link href="/categories" key={index} className="group block text-center" data-aos="fade-up">
             <figure>
-              <div className="relative w-24 h-24 md:w-40 md:h-40 mx-auto">
-                <Image 
-                  src={category.imagepath} 
-                  alt={category.name}
-                  width={160}
-                  height={160}
-                  className="rounded-full shadow-md transition-transform duration-300 group-hover:scale-110"
-                />
-              </div>
+              <div className="relative w-24 h-24 md:w-40 md:h-40 mx-auto overflow-hidden rounded-full">
+              <Image 
+                src={category.imagepath} 
+                alt={category.name}
+                fill
+                className="shadow-md transition-transform duration-300 group-hover:scale-110 object-cover"
+              />
+            </div>
               <figcaption className="mt-4">
                 <span className="font-semibold text-gray-700 transition-colors group-hover:text-red-600">
                   {category.name}
