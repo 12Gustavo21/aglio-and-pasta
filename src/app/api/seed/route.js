@@ -1,5 +1,5 @@
 import { supabase } from '@/lib/supabaseClient'
-import categories from '@/data/categories'
+// import categories from '@/data/categories'
 import favorites from '@/data/favorites-massas'
 import promotions from '@/data/promotion'
 import { toDbLowercaseArray } from '@/lib/transform'
